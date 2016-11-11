@@ -1,0 +1,123 @@
+
+$background-color: #253646;
+$text-color: #ffa52d;
+
+body {
+  background: url("../images/weave.png"); 
+}
+
+html, body {
+  height: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background: rgba($background-color, 0.64);
+}
+
+.quote-container {
+  max-width: 50%;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  line-height: 65px;
+  color: lighten($text-color, 10%);
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  
+}
+
+p#author {
+  font-style: normal;
+  text-align: right;
+  font-size: 30px;
+  margin-top: 20px;
+  color: lighten($text-color, 25%);
+}
+
+.button-wrapper {
+  text-align: center;
+  margin-top: 50px
+}
+
+button {
+  background: lighten($text-color, 10%);
+  color: lighten($background-color, 20%);
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  margin: 0px 0 0 40px;
+  
+  &:hover {
+    background: lighten($text-color, 5%);
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+a:hover svg {
+  fill: lighten($text-color, 20%);
+}
+
+svg {
+  fill: lighten($text-color, 30%);
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  top: 15px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1450px) {
+  .quote-container {
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .quote-container {
+    max-width: 75%;
+  }
+  p {
+    font-size: 40px;
+    line-height: 57px;
+    font-weight: normal;
+  }
+  
+  p#author {
+    font-size: 26px;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .quote-container {
+    max-width: 90%;
+  }
+  p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  
+  p#author {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
